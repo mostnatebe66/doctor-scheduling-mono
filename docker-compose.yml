@@ -1,0 +1,32 @@
+services:
+  mongo:
+    image: mongo:6.0
+    ports: ['27017:27017']
+    volumes: [mongo-data:/data/db]
+
+  # builds API image
+  doctor-scheduling-api:
+    build: ./doctor-scheduling-api
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/pds_schedule
+    depends_on: [mongo]
+    ports: ['3000:3000']
+
+  # builds Web image
+  doctor-scheduling-web-app:
+    build: ./doctor-scheduling-web-app
+    environment:
+      - VITE_API_URL=http://localhost:3000
+    depends_on: [doctor-scheduling-api]
+    ports: ['4173:4173']
+
+  # optional: runs seeding using the API image
+  seed:
+    build: ./doctor-scheduling-api
+    command: ['npm', 'run', 'seed']
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/doctor_schedule
+    depends_on: [mongo]
+
+volumes:
+  mongo-data:

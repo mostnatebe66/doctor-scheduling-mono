@@ -1,0 +1,32 @@
+{
+  "name": "pds-schedule-app",
+  "version": "1.0.0",
+  "description": "A simple full-stack app for managing a doctor's daily schedule.",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "cross-env MONGO_URI=mongodb://127.0.0.1:27017/pds_schedule npm --prefix doctor-scheduling-api run seed",
+    "down": "docker compose down",
+    "clear-mongo-data": "node scripts/clearMongoData.js",
+    "build": "npm run build:api && npm run build:web",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "compose": "^0.1.2",
+    "concurrently": "^9.2.1",
+    "cross-env": "^10.1.0",
+    "docker": "^1.0.0",
+    "mongo": "^0.1.0",
+    "prettier": "^3.6.2",
+    "up": "^1.0.2",
+    "wait-on": "^9.0.1"
+  },
+  "dependencies": {
+    "mongoose": "^8.19.1"
+  }
+}

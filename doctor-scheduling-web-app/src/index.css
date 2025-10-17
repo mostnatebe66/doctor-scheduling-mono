@@ -1,0 +1,8 @@
+@import 'tailwindcss';
+/* Helper button styles (opt-in via className) */
+.btn-primary {
+  @apply rounded-xl bg-sky-500 px-4 py-2 font-medium text-white shadow hover:bg-sky-600 focus:outline-none focus:ring-4 focus:ring-sky-200;
+}
+.btn-outline {
+  @apply rounded-xl border border-slate-300 px-3 py-2 text-slate-700 hover:bg-slate-50;
+}

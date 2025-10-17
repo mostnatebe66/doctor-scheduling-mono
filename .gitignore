@@ -1,0 +1,100 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+.pnpm-store/
+.cache/
+dist/
+build/
+coverage/
+.vscode/
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env.*
+!.env.example
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
+*.swo
+
+# Logs
+logs/
+*.log
+*.pid
+*.seed
+*.pid.lock
+
+# TypeScript
+*.tsbuildinfo
+
+# Tests
+coverage/
+test-results/
+.vitest/
+
+# Docker
+docker-compose.override.yml
+*.pid
+tmp/
+data/
+*.log
+*.sock
+
+# Build artifacts
+**/dist/
+**/build/
+**/out/
+
+# Frontend (React/Vite)
+.pnp/
+.pnp.js
+.cache/
+.next/
+out/
+.vite/
+vite.config.timestamp*
+*.local
+*.zip
+
+# MongoDB data
+mongo-data/
+dump/
+*.bson
+*.lock
+
+# Mac/Linux
+.AppleDouble
+.LSOverride
+Icon?
+ehthumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# Project archives
+*.tar
+*.tgz
+*.zip
+
+# JetBrains
+*.iml
+.idea/
+out/
+
+# Coverage reports
+lcov-report/
+coverage-final.json
+nyc_output/
