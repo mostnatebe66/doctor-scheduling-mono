@@ -1,4 +1,4 @@
-# PD&S Doctor Scheduling App
+# Doctor Scheduling App
 
 A simple full-stack app for managing a doctor's daily schedule.
 
